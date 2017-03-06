@@ -1,0 +1,30 @@
+{
+  "name": "hello-motto/config-service-provider",
+  "description": "A service provider to configurate silex ~2.0 with yaml, json and php files",
+  "type": "library",
+  "keywords": ["silex", "yaml", "serviceprovider"],
+  "license": "GPL-3.0+",
+  "require": {
+    "silex/silex": "^2.0"
+  },
+  "require-dev": {
+    "symfony/yaml": "^3.1"
+  },
+  "suggest": {
+    "symfony/yaml": "^3.1"
+  },
+  "authors": [
+    {
+      "name": "Jean-Baptiste Motto",
+      "email": "contact@hello-motto.fr",
+      "homepage": "https://github.com/hello-motto",
+      "role": "developer"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "HelloMotto\\Silex\\Config\\": "src/HelloMotto/Silex/Config/"
+    }
+  }
+}
