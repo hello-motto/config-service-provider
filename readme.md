@@ -50,8 +50,8 @@ $app->register(new HelloMotto\Silex\Config\ConfigServiceProvider(), [
 where `PATH_TO_CONFIG_FILE` is location of YML, JSON or PHP file with configuration for example
 ```php
 __DIR__. "/config/config.yml",
-__DIR__. "/config/config.json,
-__DIR__. "/config/config.php`,
+__DIR__. "/config/config.json",
+__DIR__. "/config/config.php",
 ```
 
 ### Files example :
@@ -79,7 +79,7 @@ return [
         "dbhost": "localhost",
         "dbuser": "user",
         "dbpass": "t@rt1fl3tt3",
-        "dbport": "~" // tilde will be replaced by null value
+        "dbport": "~"
     },
     "twig": {
         "twig.form.templates": [
@@ -109,7 +109,7 @@ You can set the constants in the 'config.constants' array :
 $app->register(new HelloMotto\Silex\Config\ConfigServiceProvider(), [
     'config.files' => [],
     'config.constants' => [
-        '%web.dir%' => '__DIR__.'/../web',
+        '%web.dir%' => __DIR__.'/../web',
         '%need%' => 'tartiflette',
         etc.
     ]
@@ -172,7 +172,6 @@ Notice that PHP config files don't support the import method.
           "resource": "parameters.json"
         }
     ]
-// config.json and parameters.json are in the same directory as config_dev.json
 }
 ```
 
