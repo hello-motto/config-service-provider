@@ -1,4 +1,4 @@
-YamlConfigServiceProvider for Silex 2
+ConfigServiceProvider for Silex 2
 =
 
 This is a Service Provider that permits to use YAML, JSON and PHP config files in a Silex app.
@@ -22,7 +22,7 @@ Or add to composer.json
 
 ``` json
 "require": {
-    "hello-motto/yaml-config-service-provider": "dev-master"
+    "hello-motto/config-service-provider": "dev-master"
 }
 ```
 
