@@ -21,7 +21,6 @@
       "role": "developer"
     }
   ],
-  "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
       "HelloMotto\\Silex\\Config\\": "src/HelloMotto/Silex/Config/"
