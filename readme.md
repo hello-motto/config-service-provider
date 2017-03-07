@@ -28,7 +28,7 @@ Or add to composer.json
 
 # Usage
 This Provider will parse your YAML, JSON and PHP files to set config variables.
-Thoses config variables are available through `$app['config']['myVariable']`.
+Those config variables are available through `$app['config']['myVariable']`.
 Some special variables you can define (parameters variable) also are available through `$app['parameters']`.
 All the variables that are contained in the several config files are recursively merged in a array.
 
@@ -120,23 +120,23 @@ $app->register(new HelloMotto\Silex\Config\ConfigServiceProvider(), [
 ``` json
 {
     "mySubDirectory": "%web.dir%/reblochon",
-    "our_motto": "In %need% we trust"
+    "ourMotto": "In %need% we trust"
 }
 ```
 
 **config/config.yml**
 ``` yaml
     mySubDirectory: "%web.dir%/reblochon",
-    our_motto: "In %need% we trust"
+    ourMotto: "In %need% we trust"
 ```
 
-The `app['config']['mySubDirectory']` variable will contain `In tartiflette we trust`.
+The `app['config']['ourMotto']` variable will contain `In tartiflette we trust`.
 
 ##Add closures
 
 YAML and JSON files don't allow to use dynamic code.
 But some Providers like Security Provider are more powerful with closure parameters.
-That's why it is possible to add some closures with the 'config.closures' parameter.
+That's why it's possible to add some closures with the 'config.closures' parameter.
 To use the closure parameter, your array must have the same tree structure.
 
 ```php
@@ -147,7 +147,9 @@ $app->register(new HelloMotto\Silex\Config\ConfigServiceProvider(), [
         'security' => [
             'security.firewalls' => [
                 'main' => [
-                    'users' => new UserProvider()
+                    'users' => function() {
+                        return new UserProvider();
+                    }
                 ]
             ]
         ]
