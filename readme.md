@@ -16,7 +16,7 @@ Suggested
 
 Install with Composer:
 
-    $ composer require "hello-motto/config-service-provider": "dev-master"
+    $ composer require hello-motto/config-service-provider dev-master
 
 Or add to composer.json
 
